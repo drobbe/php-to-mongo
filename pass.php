@@ -5,7 +5,7 @@ require(__DIR__.'/vendor/autoload.php');
 //use Symfony\Component\Dotenv\Dotenv;
 
 
-$dotenv = Dotenv\Dotenv::createImmutable('./');
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 
