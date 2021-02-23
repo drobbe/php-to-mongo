@@ -9,10 +9,12 @@ $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
 
-$MONGO_URL = $_ENV['MONGO_URL'];
+$MONGO_URL  = $_ENV['MONGO_URL'];
+$DATABASE   = $_ENV['DATABASE'];
+$COLECCTION = $_ENV['COLECCTION'];
 
 $mongo = new MongoDB\Client($MONGO_URL);
-$colección = $mongo->test_rabbit->beers;
+$colección = $mongo->$DATABASE->$COLECCTION;
 
 
 
